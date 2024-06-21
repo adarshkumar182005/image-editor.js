@@ -1,0 +1,143 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* We'll write our CSS Code here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color: #0e5bf6;
+}
+
+body {
+  background-color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 15px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wrapper {
+  min-height: 350px;
+  max-height: 400px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  border: none;
+}
+
+#reset {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+#upload {
+  background-color: #888;
+  color: #fff;
+}
+
+#save {
+  background-color: var(--color);
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.editor-panel {
+  width: 40%;
+  border: 1px solid #0005;
+  border-radius: 7px;
+  padding: 15px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-panel {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preview-panel img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  background: #fff;
+  border: 2px solid #0003;
+  width: calc(50% - 5px);
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.filter-button.active {
+  border: none;
+  background: var(--color);
+  color: #fff;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+
+#slider {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.rotate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rotate-button {
+  border: 1px solid #0005;
+  background-color: #fff;
+}
+
+.disable .editor-panel,
+.disable #reset,
+.disable #save {
+  pointer-events: none;
+  opacity: 0.5;
+}

@@ -1,0 +1,88 @@
+<!--
+  Built at RICR
+  For more information, visit: https://ricr.in/
+
+  Project Name: Image Edit App using HTML CSS and JavaScript
+  Workshop Dates: 18-21 June 2024
+  Workshop Venue: RICR Bhopal
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Editor App | RICR</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disabled">
+      <h2>Image Editor</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div>
+            <span class="title">Filters</span>
+            <div class="filters">
+              <button class="button filter-button active" id="brightness">
+                Brightness
+              </button>
+              <button class="button filter-button" id="saturation">
+                Saturation
+              </button>
+              <button class="button filter-button" id="inversion">
+                Inversion
+              </button>
+              <button class="button filter-button" id="grayscale">
+                GrayScale
+              </button>
+            </div>
+          </div>
+          <div>
+            <div class="label">
+              <span class="title" id="selected-filter">Brightness</span>
+              <span class="title" id="value">100%</span>
+            </div>
+            <input type="range" id="slider" min="0" max="200" value="100" />
+          </div>
+          <div>
+            <span class="title">Rotate & Flip</span>
+            <div class="rotate">
+              <button class="button rotate-button" id="rotate-left">
+                <i class="fas fa-undo"></i>
+              </button>
+              <button class="button rotate-button" id="rotate-right">
+                <i class="fas fa-redo"></i>
+              </button>
+              <button class="button rotate-button" id="flip-x">
+                <i class="fas fa-arrows-alt-h"></i>
+              </button>
+              <button class="button rotate-button" id="flip-y">
+                <i class="fas fa-arrows-alt-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-panel">
+          <img src="image-placeholder.svg" alt="Preview" id="main-image" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="button" id="reset">Reset</button>
+        <div>
+          <input type="file" name="file" id="file-input" hidden />
+          <button class="button" id="upload">Upload</button>
+          <button class="button" id="save">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
